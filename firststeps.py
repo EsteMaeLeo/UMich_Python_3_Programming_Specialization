@@ -1,0 +1,12 @@
+print("Hello, World!")
+print("Operators")
+print(10 + 5)
+print(10 - 5)
+print(9 / 5)
+print(9 // 5)   ##If you want truncated division, which ignores the remainder,  use the // operato
+print(10 % 3)
+print(10 * 5)
+print(10 ** 5)
+print( (10+20) / 2 )
+print(18.0 // 4)
+print(18 % 4)
