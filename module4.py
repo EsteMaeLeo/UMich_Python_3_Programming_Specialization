@@ -55,7 +55,7 @@ del alist[1:5]
 print(alist)
 
 
-print("****************************************")
+print("******#Objects and References**********************************")
 #Objects and References
 a = "banana"
 b = "banana"
@@ -82,6 +82,7 @@ print(id(a))
 print(id(b))
 
 #Aliasing
+print("Aliasing")
 a = [81, 82, 83]
 b = a
 print(a is b)
@@ -144,3 +145,99 @@ print(mylist)
 lastitem = mylist.pop()
 print(lastitem)
 print(mylist)
+
+# Append versus Concatenate
+#The append method adds a new item to the end of a list. It is also possible to add a new item to the end of a list by using the concatenation operato
+#It is also important to realize that with append, the original list is simply modified. On the other hand, with concatenation, an entirely new list is created
+origlist = [45,32,88]
+
+origlist.append("cat")
+print(origlist)
+origlist = origlist + ["cat"]
+print(origlist)
+
+origlist = [45,32,88]
+print("origlist:", origlist)
+print("the identifier:", id(origlist))             #id of the list before changes
+newlist = origlist + ['cat']
+print("newlist:", newlist)
+print("the identifier:", id(newlist))              #id of the list after concatentation
+origlist.append('cat')
+print("origlist:", origlist)
+print("the identifier:", id(origlist))             #id of the list after append is used
+
+st = "Warmth"
+a = []
+b = a + [st[0]]
+c = b + [st[1]]
+d = c + [st[2]]
+e = d + [st[3]]
+f = e + [st[4]]
+g = f + [st[5]]
+print(g)
+
+st = "Warmth"
+a = []
+a.append(st[0])
+a.append(st[1])
+a.append(st[2])
+a.append(st[3])
+a.append(st[4])
+a.append(st[5])
+print(a)
+
+ss = "Hello, World"
+print(ss.upper())
+
+tt = ss.lower()
+print(tt)
+print(ss)
+
+ss = "    Hello, World    "
+
+els = ss.count("l")
+print(els)
+
+print("***"+ss.strip()+"***")
+
+news = ss.replace("o", "***")
+print(news)
+
+ss = "    Hello, World    "
+
+els = ss.count("l")
+print(els)
+
+print("***"+ss.strip()+"***")
+
+news = ss.replace("o", "***")
+print(news)
+
+s = "python rocks"
+print(s[1]*s.index("n"))
+
+name = "Rodney Dangerfield"
+score = -1  # No respect!
+print("Hello " + name + ". Your score is " + str(score))
+
+#better called fill-in-the-braces. The string method format, makes substitutions into places in a string enclosed in braces.
+
+scores = [("Rodney Dangerfield", -1), ("Marlon Brando", 1), ("You", 100)]
+for person in scores:
+    name = person[0]
+    score = person[1]
+    print("Hello {}. Your score is {}.".format(name, score))
+
+origPrice = float(input('Enter the original price: $'))
+discount = float(input('Enter discount percentage: '))
+newPrice = (1 - discount/100)*origPrice
+#calculation = '${} discounted by {}% is ${}.'.format(origPrice, discount, newPrice)
+#print(calculation)
+print('${} discounted by {}% is ${}.'.format(origPrice, discount, newPrice))
+
+origPrice = float(input('Enter the original price: $'))
+discount = float(input('Enter discount percentage: '))
+newPrice = (1 - discount/100)*origPrice
+calculation = '${:.2f} discounted by {}% is ${:.2f}.'.format(origPrice, discount, newPrice)
+print(calculation)
+
