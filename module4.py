@@ -6,21 +6,23 @@ print(fruit)
 print("Modify")
 fruit[0] = "pear"
 fruit[-1] = "orange"
-print(fruit)
+print("fruit modify values: ",fruit)
 
 alist = ['a', 'b', 'c', 'd', 'e', 'f']
 print(alist)
 alist[1:3] = ['x', 'y']
-print(alist)
+print("Modify alist alist[1:3] = ['x', 'y']: ", alist)
 
 print("Delete")
+#replace particular slice
 alist = ['a', 'b', 'c', 'd', 'e', 'f']
 print(alist)
 alist[1:3] = []
-print(alist)
+print("Delete alist[1:3] = []", alist)
 
 print("Insert")
 alist = ['a', 'd', 'f']
+print(alist)
 alist[1:1] = ['b', 'c']
 print(alist)
 alist[4:4] = ['e']
@@ -95,7 +97,7 @@ b = a
 print(a == b)
 print(a is b)
 
-b[0] = 5
+b[0] = 5 # the change will replace for both
 print(a)
 
 #Cloning Lists
@@ -106,7 +108,7 @@ b = a[:]       # make a clone using slice
 print(a == b)
 print(a is b)
 
-b[0] = 5
+b[0] = 5 # only b is affected
 
 print(a)
 print(b)
@@ -120,6 +122,7 @@ print(alist)
 # Mutating Methods
 print(" Mutating Methods")
 mylist = []
+print("empty list ", mylist)
 mylist.append(5)
 mylist.append(27)
 mylist.append(3)
@@ -143,7 +146,7 @@ mylist.remove(5)
 print(mylist)
 
 lastitem = mylist.pop()
-print(lastitem)
+print("last item using mylist.pop() ",  lastitem)
 print(mylist)
 
 # Append versus Concatenate
