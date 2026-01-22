@@ -31,3 +31,86 @@ for word in lst_org:
     if not(word in stopwords):
         acro = acro + word[0].upper()
 print(acro)
+
+#Write code that uses the string stored in sent and creates an acronym which is assigned to the variable acro. 
+#The first two letters of each word should be used, each letter in the acronym should be a capital letter, and each 
+#element of the acronym should be separated by a “. “ (dot and space). Words that should not be included in the acronym 
+#are stored in the list stopwords. For example, if sent was assigned the string “height and ewok wonder” then the resulting 
+#acronym should be “HE. EW. WO”.
+print("******************************************************")
+print("Question #3")
+stopwords = ['to', 'a', 'for', 'by', 'an', 'am', 'the', 'so', 'it', 'and', 'The']
+sent = "The water earth and air are vital"
+acro = ""
+lst_sent = sent.split(" ")
+print(lst_sent)
+print(len(lst_sent))
+for word in lst_sent:
+    if not(word in stopwords):
+        acro = acro + word[0:2].upper() + "." + " "
+print(acro)
+
+stopwords = ['to', 'a', 'for', 'by', 'an', 'am', 'the', 'so', 'it', 'and', 'The']
+sent = "The water earth and air are vital"
+acro = ""
+acro_lst = []
+lst_sent = sent.split()
+for word in lst_sent:
+    if not(word in stopwords):
+        acro_lst.append(word[0:2].upper())
+acro = ". ".join(acro_lst)
+print(acro)
+
+wds = ["red", "blue", "green"]
+glue = ';'
+s = glue.join(wds)
+print(s)
+print(wds)
+
+print("***".join(wds))
+print(". ".join(wds))
+
+
+
+#Provided is a list of data about a store’s inventory where each item in the list represents the name of an item, 
+#how much is in stock, and how much it costs. Print out each item in the list with the same formatting, using the .format 
+#method (not string concatenation). For example, the first print statment should read The store has 12 shoes, each 
+#for 29.99 USD.
+print("******************************************************")
+print("Question #4")
+inventory = ["shoes, 12, 29.99", "shirts, 20, 9.99", "sweatpants, 25, 15.00", "scarves, 13, 7.75"]
+for inv in inventory:
+    lst_inv = inv.split(", ")
+    print("The store has {} {}, each for {} USD.".format(lst_inv[1], lst_inv[0], lst_inv[2]))
+
+#A palindrome is a phrase that, if reversed, would read the exact same. Write code that checks if p_phrase 
+#is a palindrome by reversing it and then checking if the reversed version is equal to the original. Assign the 
+#reversed version of p_phrase to the variable r_phrase so that we can check your work.
+print("******************************************************")
+print("Question #3")
+p_phrase = "was it a car or a cat I saw"
+r_phrase = ""
+for char in p_phrase:
+    r_phrase = char + r_phrase
+print(r_phrase)
+  
+
+print("***************LETCODE*************************************")
+#s = "A man, a plan, a canal: Panama"
+s = "taco cat"
+print(s)
+result = "".join(char for char in s if char.isalpha()).lower()
+reverse = ""
+i = 0
+for char in result:
+    reverse = char + reverse
+    
+if len(reverse) == len(result):    
+    isPal = True
+    for char in result:
+        if char != reverse[i]:
+            isPal = False
+        i = i + 1
+print(reverse)
+print(result)
+print(isPal)
