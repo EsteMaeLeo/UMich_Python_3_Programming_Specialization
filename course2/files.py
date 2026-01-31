@@ -23,8 +23,16 @@ fileref.close()
 
 #rreturn list using fileref
 fileref = open("d:/code/data/data.txt", "r")
-print("Printing using for reference the object fileref /n",)
+print("Printing using for reference the object fileref",)
 for line in fileref:
     print(line.strip())
 ## other code here that refers to variable fileref
 fileref.close()
+
+olympicsfile = open("d:/code/data/data.txt", "r")
+
+for aline in olympicsfile.readlines():
+    values = aline.split(",")
+    print(values[0], "is from", values[3], "and is on the roster for", values[4])
+
+olympicsfile.close()
