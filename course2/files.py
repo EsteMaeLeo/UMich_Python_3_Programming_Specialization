@@ -29,10 +29,13 @@ for line in fileref:
 ## other code here that refers to variable fileref
 fileref.close()
 
-olympicsfile = open("d:/code/data/data.txt", "r")
-
-for aline in olympicsfile.readlines():
-    values = aline.split(",")
-    print(values[0], "is from", values[3], "and is on the roster for", values[4])
+olympicsfile = open("d:/code/data/athlete_events.csv", "r")
+contents = olympicsfile.read()
+print(len(contents))
+#for aline in olympicsfile.readlines():
+#    values = aline.split(" ")
+#    print(values)
+    #if values[14] == "NA" and  values[9] == 2000: 
+    #    print(values[1], "is from", values[6], "and is on the roster for", values[12])
 
 olympicsfile.close()
