@@ -17,7 +17,7 @@ print(lines[:4])
 print("length", len(lines))
 print("Printing using for")
 for line in lines:
-    print(line.strip())
+ print(line.strip())
 ## other code here that refers to variable fileref
 fileref.close()
 
@@ -39,3 +39,31 @@ print(len(contents))
     #    print(values[1], "is from", values[6], "and is on the roster for", values[12])
 
 olympicsfile.close()
+
+olympicsfile = open("d:/code/data/athlete_events.csv", "r")
+#lines = 0
+contents = olympicsfile.readlines()
+print(len(contents))
+
+olympicsfile.close()
+
+#Create a string called first_forty that is comprised of the first 40 characters of emotion_words2.txt.
+fileref = open("d:/code/data/emotion_words2.txt", "r")
+first_forty = fileref.read(40)
+print(first_forty)
+fileref.close()
+
+fileref = open("d:/code/data/emotion_words2.txt", "r")
+num_lines = 0
+for line in fileref:
+   num_lines += 1
+print(num_lines)
+fileref.close()
+
+print("relative path")
+fileref = open("../../data/emotion_words2.txt", "r")
+num_lines = 0
+for line in fileref:
+   num_lines += 1
+print(num_lines)
+fileref.close()
