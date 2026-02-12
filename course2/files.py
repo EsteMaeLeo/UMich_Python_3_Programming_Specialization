@@ -61,9 +61,9 @@ print(num_lines)
 fileref.close()
 
 print("relative path")
-fileref = open("../../data/emotion_words2.txt", "r")
-num_lines = 0
-for line in fileref:
-   num_lines += 1
-print(num_lines)
+fileref = open("../../data/squares.txt", "w")
+square = 0
+for number in range(30):
+   square = number * number
+   print(square)
 fileref.close()
