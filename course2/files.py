@@ -61,9 +61,11 @@ print(num_lines)
 fileref.close()
 
 print("relative path")
-fileref = open("../../data/squares.txt", "w")
+fileref = open("../../../data/squares.txt", "w")
 square = 0
 for number in range(30):
    square = number * number
-   print(square)
+   print(str(square))
+   fileref.write(str(square))
+   fileref.write('\nls')
 fileref.close()
