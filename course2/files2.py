@@ -1,5 +1,5 @@
 print("relative path")
-fileref = open("../../../data/squares2.txt", "w")
+fileref = open("../test/squares.txt", "w")
 square = 0
 for number in range(10):
    square = number * number
@@ -7,5 +7,21 @@ for number in range(10):
    fileref.write(str(square) + "\n")
 fileref.close()
 
-fileref = open("../../../data/squares.txt", "r")
+fileref = open("../test/squares.txt", "r")
 print(fileref.read()[:10])
+
+print("Open file using WITH")
+
+fname = "../test/squares.txt"
+with open(fname, 'r') as md:
+    #print(lines.read())
+    lines = md.readlines()
+    for line in lines:
+        print(line)
+
+fname = "../test/squares2.txt"
+with open(fname, 'w') as md:
+    for number in range(10):
+        square = number * number
+        md.write(str(square) + "\n")
+
