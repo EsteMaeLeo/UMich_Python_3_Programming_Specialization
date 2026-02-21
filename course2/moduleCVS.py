@@ -22,3 +22,15 @@ with open("../test/reduced_olympics.csv", "r") as f:
     for row_vals in reader:
         if row_vals[0] != "NA":
             print(f"{row_vals[0]} : {row_vals[1]} : {row_vals[2]}")
+
+olympians = [("John Aalberg", 31, "Cross Country Skiing, 15KM"),
+             ("Minna Maarit Aalto", 30, "Sailing"),
+             ("Win Valdemar Aaltonen", 54, "Art Competitions"),
+             ("Wakako Abe", 18, "Cycling")]
+
+outfile = open("../test/reduced_olympics2.csv", "w")
+writer = csv.writer(outfile)
+writer.writerow(['Name', 'Age', 'Sport'])
+for olympian in olympians:
+    writer.writerow(olympian)
+outfile.close()
