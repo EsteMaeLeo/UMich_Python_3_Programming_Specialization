@@ -68,3 +68,17 @@ with open(fpath, "r") as travel:
         print(num)
 # YOUR CODE HERE
 #raise NotImplementedError()
+
+#We have provided a file called assets/emotion_words.txt that contains lines of words that \
+# describe emotions. Find the total number of words in the file and assign this value to the variable num_words.
+num_words = 0
+# YOUR CODE HERE
+fpath = "../test/emotion_words.txt"
+with open(fpath, "r") as f:
+    lines = f.readlines()
+    for line in lines:
+        listline = line.split()
+        num_words = num_words + len(listline)
+
+print(num_words)
+assert num_words == 48, "num_words is not assigned the correct value"
