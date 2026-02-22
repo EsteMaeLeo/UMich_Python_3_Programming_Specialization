@@ -6,11 +6,58 @@ with open(fname, 'r') as md:
 #Write code to print the first character from each line of “school_prompt2.txt”    
 
 fobject = "../test/school_prompt2.txt"
-with open(fobject, 'r') as md:
-    lines = md.readlines()
+with open(fobject, 'r') as file:
+    lines = file.readlines()
     print(lines)
     for line in lines:
         print(line[0])
+
+#Write code that, when executed, writes to a file “school_prompt3.txt” the numbers 0 to 19, 
+# #each written on a separate line
+fobject = "../test/school_prompt3.txt"
+with open(fobject, 'w') as file:
+    for number in range(20):
+        file.write(f"{number}\n")
+#Then write code and one or more `assert` statements that will test whether your code has worked correctly. 
+# (Hint: read in the contents of the file and see if it’s what you thought should be written there.)
+
+with open(fobject, 'r') as file:
+    num = file.readlines()
+
+expected = [f"{i}\n" for i in range(20)]
+
+assert num == expected
+
+#more robust
+with open(fobject, 'r') as file:
+    num = file.read()
+
+# Split and clean each line
+actual_numbers = [
+    line.strip()                 # remove \n, \r\n, spaces
+    for line in num.splitlines()
+    if line.strip()              # skip empty lines
+]
+
+expected_numbers = [str(i) for i in range(20)]
+
+assert actual_numbers == expected_numbers, \
+    f"Expected {expected_numbers}\nGot     {actual_numbers}"
+
+
+#Modern
+filename = "school_prompt3.txt"
+
+# Write
+with open(filename, 'w') as f:
+    f.writelines(f"{i}\n" for i in range(20))     # nice one-liner
+
+# Test
+with open(filename) as f:
+    numbers = [line.strip() for line in f]
+
+assert numbers == [str(i) for i in range(20)], "Wrong numbers in file"
+print("All good!")
 
 #The textfile, assets/travel_plans.txt, contains the summer travel plans for someone with some commentary. 
 # Find the total number of characters in the fileand save to the variable num
