@@ -82,3 +82,10 @@ with open(fpath, "r") as f:
 
 print(num_words)
 assert num_words == 48, "num_words is not assigned the correct value"
+
+
+#Assign to the variable num_lines the number of lines in the file assets/school_prompt.txt.
+
+num_lines = None
+​
+# YOUR CODE HERE
