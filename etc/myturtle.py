@@ -13,5 +13,7 @@ for _ in range(4):
     my_turtle.forward(100)  # Move forward 100 pixels
     my_turtle.right(90)     # Turn right 90 degrees
 
+    
+
 # Keep window open until clicked
 wn.exitonclick()
