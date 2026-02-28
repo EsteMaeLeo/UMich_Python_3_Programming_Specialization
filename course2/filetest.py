@@ -88,3 +88,9 @@ assert num_words == 48, "num_words is not assigned the correct value"
 
 num_lines = None
 # YOUR CODE HERE
+fpath = "../test/school_prompt.txt"
+with open(fpath, 'r') as f:
+   lines = f.readlines()
+   num_lines = len(lines)
+   print(num_lines) 
+assert num_lines == 10, "num_lines is not assigned the correct value"  
