@@ -34,3 +34,15 @@ with open(fpath, 'r') as f:
    num_lines = len(lines)
    print(num_lines) 
 assert num_lines == 10, "num_lines is not assigned the correct value"  
+
+#Assign the first 30 characters of `assets/school_prompt.txt` as a string to the variable `beginning_chars`.
+
+beginning_chars = None
+
+# YOUR CODE HERE
+#raise NotImplementedError()
+beginning_chars = ""
+fpath = "../test/school_prompt.txt"
+with open(fpath, 'r') as f:
+    beginning_chars = f.read()[:30]
+    print(beginning_chars)
