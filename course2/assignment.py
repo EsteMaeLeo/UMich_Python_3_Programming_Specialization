@@ -46,3 +46,29 @@ fpath = "../test/school_prompt.txt"
 with open(fpath, 'r') as f:
     beginning_chars = f.read()[:30]
     print(beginning_chars)
+
+assert type(beginning_chars) == type(""), "beginning_chars is not a string"
+assert len(beginning_chars) == 30, "beginning_chars is not assigned the correct length"
+#**Challenge:** Using the file `assets/school_prompt.txt`, a
+# assign the third word of every line to a list called `three`.
+
+#three = None
+three = []
+fpath = "../test/school_prompt.txt"
+with open(fpath, 'r') as file:
+     for line in file:
+          listline = line.split()
+          three.append(listline[2])
+print(three)          
+# YOUR CODE HERE
+#raise NotImplementedError()
+
+three = []
+fpath = "../test/school_prompt.txt"
+with open(fpath, 'r') as file:
+    for line in file:
+        words = line.strip().split()
+        if len(words) >= 3:
+            three.append(words[2])
+
+print(three)
