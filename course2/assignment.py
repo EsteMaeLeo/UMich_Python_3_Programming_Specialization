@@ -72,7 +72,7 @@ with open(fpath, 'r') as file:
             three.append(words[2])
 
 print(three)
-
+print("*************************************")
 #Challenge: Create a list called emotions that contains the first word of every line in assets/emotion_words.txt.
 emotions = []
 
@@ -84,8 +84,10 @@ with open(fpath, 'r')  as file:
      for line in file:
           ++i     
           lt = line.split()
-          print(lt)
-          emotions.append(line.split()[i])
+          print(lt[0] )
+          print("first", line.split()[0])
+          emotions.append(line.split()[0])
+          #emotions.append(line.split()[i])
 print(emotions)
 #raise NotImplementedError()
 #assert type(emotions) == type([]), "emotions is not a list"
