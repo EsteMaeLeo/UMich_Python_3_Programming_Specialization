@@ -77,18 +77,27 @@ print("*************************************")
 emotions = []
 
 # YOUR CODE HERE
-i = 0
-lt = []
+emotions = []
 fpath = "../test/emotion_words.txt"
 with open(fpath, 'r')  as file:
      for line in file:
-          ++i     
-          lt = line.split()
-          print(lt[0] )
           print("first", line.split()[0])
           emotions.append(line.split()[0])
           #emotions.append(line.split()[i])
 print(emotions)
 #raise NotImplementedError()
-#assert type(emotions) == type([]), "emotions is not a list"
-#assert len(emotions) == 7, "emotions is not assigned the correct length"
+assert type(emotions) == type([]), "emotions is not a list"
+assert len(emotions) == 7, "emotions is not assigned the correct length"
+
+#Assign the first 33 characters from the textfile, assets/travel_plans.txt to the variable first_chars.
+first_chars = ""
+
+# YOUR CODE HERE
+fpath = "../test/travel_plans.txt"
+with open(fpath, "r") as file:
+     first_chars = file.read()[:33]
+print(first_chars)
+#raise NotImplementedError()
+
+assert type(first_chars) == type(""), "first_chars is not a string"
+assert len(first_chars) == 33, "first_chars is not assigned the correct length"
