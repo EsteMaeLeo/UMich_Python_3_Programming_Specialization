@@ -101,3 +101,18 @@ print(first_chars)
 
 assert type(first_chars) == type(""), "first_chars is not a string"
 assert len(first_chars) == 33, "first_chars is not assigned the correct length"
+
+#Challenge: Using the file assets/school_prompt.txt, if the character ‘p’ is in a word, then add the word to a list called p_words.
+p_words = []
+
+# YOUR CODE HERE
+fpath = "../test/school_prompt.txt"
+with open(fpath, 'r') as file:
+     for line in file:
+          for word in line.split():
+               if "p" in word:
+                p_words.append(word)
+print(p_words)
+#raise NotImplementedError()
+assert type(p_words) == type([]), "p_words is not a list"
+assert len(p_words) == 5, "p_words is not assigned the correct length"
