@@ -8,17 +8,25 @@ print(eng2sp['one'])
 inventory = {'apples': 430, 'bananas': 312, 'oranges': 525, 'pears': 217}
 print("Dictionary: ", inventory)
 del inventory['pears']
-print("delete ", inventory)
+print("delete pears ", inventory)
 
 inventory = {'apples': 430, 'bananas': 312, 'oranges': 525, 'pears': 217}
 print(inventory)
 inventory['pears'] = 0
-print(inventory)
+print("Assign value 0 to Pears", inventory)
 
 inventory = {'apples': 430, 'bananas': 312, 'oranges': 525, 'pears': 217}
 print(inventory)
 inventory['bananas'] = inventory['bananas'] + 200
-print(inventory)
+print("Modify the value adding + 200 to banana", inventory)
 
 numItems = len(inventory)
-print(numItems)
+print("num elements: ",numItems)
+
+mydict = {"cat":12, "dog":6, "elephant":23}
+mydict["mouse"] = mydict["cat"] + mydict["dog"]
+print(mydict["mouse"])
+
+swimmers = {'Manuel':4, 'Lochte':12, 'Adrian':7, 'Ledecky':5, 'Dirado':4, 'Phelps':23}
+swimmers["Phelps"] = swimmers["Phelps"] + 5 
+print(swimmers)
