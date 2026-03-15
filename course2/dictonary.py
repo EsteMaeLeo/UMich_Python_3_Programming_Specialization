@@ -30,3 +30,8 @@ print(mydict["mouse"])
 swimmers = {'Manuel':4, 'Lochte':12, 'Adrian':7, 'Ledecky':5, 'Dirado':4, 'Phelps':23}
 swimmers["Phelps"] = swimmers["Phelps"] + 5 
 print(swimmers)
+
+print("*****Methods******")
+inventory = {'apples': 430, 'bananas': 312, 'pears': 217, 'oranges': 525}
+print("All inventory: ", inventory)
+print("Oranges inventory: ", inventory["oranges"])

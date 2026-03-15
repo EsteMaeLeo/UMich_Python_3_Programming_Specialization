@@ -58,39 +58,3 @@ with open(filename) as f:
 
 assert numbers == [str(i) for i in range(20)], "Wrong numbers in file"
 print("All good!")
-
-#The textfile, assets/travel_plans.txt, contains the summer travel plans for someone with some commentary. 
-# Find the total number of characters in the fileand save to the variable num
-num = None
-fpath = "../test/travel_plans.txt"
-with open(fpath, "r") as travel:
-        num = len(travel.read())
-        print(num)
-# YOUR CODE HERE
-#raise NotImplementedError()
-
-#We have provided a file called assets/emotion_words.txt that contains lines of words that \
-# describe emotions. Find the total number of words in the file and assign this value to the variable num_words.
-num_words = 0
-# YOUR CODE HERE
-fpath = "../test/emotion_words.txt"
-with open(fpath, "r") as f:
-    lines = f.readlines()
-    for line in lines:
-        listline = line.split()
-        num_words = num_words + len(listline)
-
-print(num_words)
-assert num_words == 48, "num_words is not assigned the correct value"
-
-
-#Assign to the variable num_lines the number of lines in the file assets/school_prompt.txt.
-
-num_lines = None
-# YOUR CODE HERE
-fpath = "../test/school_prompt.txt"
-with open(fpath, 'r') as f:
-   lines = f.readlines()
-   num_lines = len(lines)
-   print(num_lines) 
-assert num_lines == 10, "num_lines is not assigned the correct value"  
