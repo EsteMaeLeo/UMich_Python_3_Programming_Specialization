@@ -35,3 +35,15 @@ print("*****Methods******")
 inventory = {'apples': 430, 'bananas': 312, 'pears': 217, 'oranges': 525}
 print("All inventory: ", inventory)
 print("Oranges inventory: ", inventory["oranges"])
+
+for key in inventory.keys():
+    print(key, "has the value ", inventory[key])
+
+keys = list(inventory.keys())
+print("Transform a list of keys: ", keys)
+
+#get values
+#return tuples
+
+for key in inventory.keys():
+    print(key, "has the value ", inventory[key])
