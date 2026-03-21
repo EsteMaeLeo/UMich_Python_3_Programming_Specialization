@@ -45,9 +45,6 @@ print("Transform a list of keys: ", keys)
 #get values
 #return tuples
 
-for key in inventory.keys():
-    print(key, "has the value ", inventory[key])
-
 inventory = {'apples': 430, 'bananas': 312, 'oranges': 525, 'pears': 217}
 
 print("sort keys")
@@ -56,12 +53,13 @@ inventory2 = inventory;
 for akey in sorted((inventory2)):
     print("sorted: ", akey, "has the value ", inventory2[key])
 
-print(list(inventory.values()))
+print(list(inventory2.values()))
+
+for k in inventory:
+    print("Got key ", k)
 
 for v in inventory.values():
-    print("Got", v)
-
-inventory = {'apples': 430, 'bananas': 312, 'oranges': 525, 'pears': 217}
+    print("Got values", v)
 
 print(list(inventory.items()))
 
@@ -76,3 +74,24 @@ if 'bananas' in inventory:
     print(inventory['bananas'])
 else:
     print("We have no bananas")
+
+
+print("Inventory apples", inventory.get("apples"))
+print("Inventory cherries", inventory.get("cherries"))
+
+print("Inventory cherries", inventory.get("cherries",0))
+
+mydict = {"cat":12, "dog":6, "elephant":23, "bear":20}
+answer = mydict.get("cat")//mydict.get("dog")
+print(answer)
+
+total = 0
+mydict = {"cat":12, "dog":6, "elephant":23, "bear":20}
+for akey in mydict:
+   if len(akey) > 3:
+      total = total + mydict[akey]
+print(total)
+
+medal_events = {'Shooting': 7, 'Fencing': 4, 'Judo': 2, 'Swimming': 3, 'Diving': 2}
+events = list(medal_events)
+print(events)
