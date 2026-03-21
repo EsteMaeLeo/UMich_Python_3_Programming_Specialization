@@ -50,6 +50,12 @@ for key in inventory.keys():
 
 inventory = {'apples': 430, 'bananas': 312, 'oranges': 525, 'pears': 217}
 
+print("sort keys")
+inventory2 = inventory;
+
+for akey in sorted((inventory2)):
+    print("sorted: ", akey, "has the value ", inventory2[key])
+
 print(list(inventory.values()))
 
 for v in inventory.values():
