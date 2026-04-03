@@ -6,16 +6,16 @@ print(numbers)
 mixed = [1, "hello", 3.14, True, None]
 print(mixed)
 
-fruits.append("melon")
-print("adding melon" ,fruits)
-fruits.extend(["fig", "kiwi", "grape"])
+fruits.append("melon") # adds one item at the end
+print("adding melon" ,fruits) 
+fruits.extend(["fig", "kiwi", "grape"]) # adds multiple items
 print("Extend adding multiples: ", fruits)
 
-fruits.insert(1, "avocado") 
+fruits.insert(1, "avocado")  # insert at specific position
 print("insert position 1: ", fruits)
-fruits.remove("banana")
+fruits.remove("banana") # remove first occurrence
 print("remove banana", fruits)
-popItem = fruits.pop()
+popItem = fruits.pop() # remove and return last item (or index)
 print("Last Item: ", popItem)
 print("cherry index", fruits.index("cherry"))
 fruits.append("apple")
@@ -41,8 +41,9 @@ shopping.remove("SSD")
 print("list: ", shopping, "Lenght", len(shopping))
 
 nums = [10, 20, 30, 40, 50]
-print(nums[0:3])
-print(nums[3:5])
+print("First 3 numbers:", nums[0:3])
+print("Last 2 numbers:", nums[3:5])        # or nums[-2:] is cleaner
+print("Last 2 numbers:",  nums[-2:]) 
 #Use the syntax list[start:stop:step]. By leaving start and stop empty and setting 
 # step to 2, you tell Python to start at the beginning, go to the end, and skip every other item.
 #First Colon (:): Represents the start and stop values. When left empty, Python 
@@ -50,7 +51,8 @@ print(nums[3:5])
 #Second Colon (:): Separates the range from the step value.
 #Step (2): Specifies the interval. A step of 2 selects the element at 
 # index 0, then 2, then 4, and so on
-print(nums[::2])
+#range(start, stop, step)
+print("Every second number:", nums[::2])
 
 listNames = []
 for i in range(3):
@@ -58,5 +60,6 @@ for i in range(3):
     listNames.append(name)
 #listNames.extend([name1, name2, name3])
 print(listNames)
+#range(start, stop, step)
 for i in range(len(listNames) -1, -1, -1):
     print(listNames[i])
