@@ -55,11 +55,62 @@ print("Last 2 numbers:",  nums[-2:])
 print("Every second number:", nums[::2])
 
 listNames = []
-for i in range(3):
-    name = input(f"Enter name {i+1}: ")
-    listNames.append(name)
+#for i in range(3):
+#    name = input(f"Enter name {i+1}: ")
+#    listNames.append(name)
 #listNames.extend([name1, name2, name3])
 print(listNames)
 #range(start, stop, step)
 for i in range(len(listNames) -1, -1, -1):
     print(listNames[i])
+
+
+mena = ["John","Eric","Charlie","Lucas", "Kate"]
+print(listNames[len(listNames)-1:])
+
+# Classic way
+squares = []
+for x in range(10):
+    squares.append(x**2)
+print(squares)
+
+# Pythonic way (one line!)
+squares = [x**2 for x in range(12)]    
+print(squares)
+
+# With condition
+even_squares = [x**2 for x in range(12) if x % 2 ==0]
+print(even_squares)
+
+# copying
+a = [1,2,3]
+b = a # b is just another name for the same list
+print("list a: ", a, " List b: ", b)
+b.append(4) # → [1, 2, 3, 4]  ← both changed!
+print("list a: ", a, " List b: ", b)
+
+c = a.copy() # shallow copy (list method)
+print("List c: ", c)
+d = a[:] # slicing copy
+print("List d: ", d)
+import copy
+e = copy.deepcopy(a) # only needed for nested lists
+print("List e: ", e)
+
+#Sorting & Advanced Methods
+numbers = [x for x in range(21)]
+numbers=[22,11,55,0,1]
+print(numbers)
+numbers.sort() # in-place, ascending
+print(numbers)
+numbers.sort(reverse=True)        # descending
+print(numbers)
+
+words = ['banana', "apple", "cherry", "melon"]
+print(words)
+words.sort(key=len) # sort by length
+print(words)
+
+# sorted() function returns a NEW list
+new_list = sorted(words, key=len, reverse=True)
+print(new_list)
