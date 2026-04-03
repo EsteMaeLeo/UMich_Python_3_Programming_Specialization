@@ -52,10 +52,10 @@ print(nums[3:5])
 # index 0, then 2, then 4, and so on
 print(nums[::2])
 
-name1 = input("write name: ")
-name2 = input("write name: ")
-name3 = input("write name: ")
-listNames = [name1, name2, name3]
+listNames = []
+for i in range(3):
+    name = input(f"Enter name {i+1}: ")
+    listNames.append(name)
 #listNames.extend([name1, name2, name3])
 print(listNames)
 for i in range(len(listNames) -1, -1, -1):
