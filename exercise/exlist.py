@@ -114,3 +114,7 @@ print(words)
 # sorted() function returns a NEW list
 new_list = sorted(words, key=len, reverse=True)
 print(new_list)
+
+#Use a list comprehension to create a list of all even numbers from 0 to 50.
+numbers = [x for x in range(51) if x % 2 == 0]
+print(numbers)

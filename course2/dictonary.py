@@ -95,3 +95,11 @@ print(total)
 medal_events = {'Shooting': 7, 'Fencing': 4, 'Judo': 2, 'Swimming': 3, 'Diving': 2}
 events = list(medal_events)
 print(events)
+
+opposites = {'up': 'down', 'right': 'wrong', 'true': 'false'}
+alias = opposites
+
+print(alias is opposites)
+
+alias['right'] = 'left'
+print(opposites['right'])
