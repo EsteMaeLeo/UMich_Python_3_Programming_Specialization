@@ -123,3 +123,10 @@ print(numbers)
 names = ["Alice", "bob", "Charlie", "dave"]
 newNames = [name.capitalize() for name in names]
 print(newNames)
+
+#You have this list of tuples:
+#students = [("Alice", 85), ("Bob", 92), ("Charlie", 78)]
+#Sort it by score (descending) using sorted() with a key function.
+students = [("Alice", 85), ("Bob", 92), ("Charlie", 78)]
+newStudents = sorted(students,key=lambda loc:loc[1], reverse=True )
+print(newStudents)
