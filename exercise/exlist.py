@@ -118,3 +118,8 @@ print(new_list)
 #Use a list comprehension to create a list of all even numbers from 0 to 50.
 numbers = [x for x in range(51) if x % 2 == 0]
 print(numbers)
+
+#Given names = ["Alice", "bob", "Charlie", "dave"], create a new list where every name is capitalized using a list capitalized using a list comprehension.
+names = ["Alice", "bob", "Charlie", "dave"]
+newNames = [name.capitalize() for name in names]
+print(newNames)
