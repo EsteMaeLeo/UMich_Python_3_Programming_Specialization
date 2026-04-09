@@ -116,7 +116,8 @@ new_list = sorted(words, key=len, reverse=True)
 print(new_list)
 
 #Use a list comprehension to create a list of all even numbers from 0 to 50.
-numbers = [x for x in range(51) if x % 2 == 0]
+#numbers = [x for x in range(51) if x % 2 == 0]
+numbers = list(range(0, 51, 2))
 print(numbers)
 
 #Given names = ["Alice", "bob", "Charlie", "dave"], create a new list where every name is capitalized using a list capitalized using a list comprehension.
@@ -128,5 +129,5 @@ print(newNames)
 #students = [("Alice", 85), ("Bob", 92), ("Charlie", 78)]
 #Sort it by score (descending) using sorted() with a key function.
 students = [("Alice", 85), ("Bob", 92), ("Charlie", 78)]
-newStudents = sorted(students,key=lambda loc:loc[1], reverse=True )
+newStudents = sorted(students, key=lambda student: student[1], reverse=True)
 print(newStudents)
