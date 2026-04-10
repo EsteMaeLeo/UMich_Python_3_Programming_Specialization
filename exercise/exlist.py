@@ -145,15 +145,67 @@ print(b)
 c = a.copy()          # Recommended
 print(c)
 c.append(1)
-print(a, c)
+print("original: ", a, "c = a.copy()", c)
 d = a[:]              # Slicing (very common)
+print("Slicing d: ", d)
 e = list(a)           # Also fine
-
+print("e = list(a) : ", e)
 
 # Deep copy - needed when you have nested lists
 import copy
 nested = [[1, 2], [3, 4]]
 deep = copy.deepcopy(nested)
+print("nested " ,nested,"copy.deepcopy(nested) ", deep )
 
 nested[0][0] = 999
 print(deep)           # Still [[1, 2], [3, 4]]
+print(nested)
+deep2 = [[x,x] for x in range(20) if x % 2 == 0 ]
+print(deep2)
+
+# Shallow copy
+original = [[1, 2], [3, 4]]
+shallow = original.copy()
+shallow[0][0] = 99
+print(original)
+print(shallow)
+
+# Matrix
+matrix = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+print(matrix)
+print(matrix[1][2]) # → 6  (row 1, column 2)
+
+for row in matrix:
+    print(row)
+compMatrix = [[2] * 4 for _ in range(3)]# 3 rows × 4 columns
+print(compMatrix)
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
+
+print(matrix, len(matrix[0]))
+
+transposed = [[row[i] for row in matrix] for i in range(len(matrix[0]))]
+
+print(transposed)
+# Result: [[1, 4], [2, 5], [3, 6]]
+
+from collections import deque
+
+# Create a queue
+q = deque(["task1", "task2", "task3"])
+
+q.append("task4")           # Add to the right (enqueue)
+print(q)
+print(q.popleft())          # Remove from the left (dequeue) → task1
+
+# Also supports appendleft() and pop() for stack behavior
+
+print_queue = deque()
+print(print_queue)
