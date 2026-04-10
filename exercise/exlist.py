@@ -131,3 +131,29 @@ print(newNames)
 students = [("Alice", 85), ("Bob", 92), ("Charlie", 78)]
 newStudents = sorted(students, key=lambda student: student[1], reverse=True)
 print(newStudents)
+
+##LEVEL 3###
+### RECAP
+# Dangerous - both variables point to the same list
+a = [1, 2, 3]
+b = a          # This is NOT a copy!
+b.append(99)
+print(a)       # [1, 2, 3, 99]  ← a also changed!
+print(b)
+
+# Correct ways to make a shallow copy
+c = a.copy()          # Recommended
+print(c)
+c.append(1)
+print(a, c)
+d = a[:]              # Slicing (very common)
+e = list(a)           # Also fine
+
+
+# Deep copy - needed when you have nested lists
+import copy
+nested = [[1, 2], [3, 4]]
+deep = copy.deepcopy(nested)
+
+nested[0][0] = 999
+print(deep)           # Still [[1, 2], [3, 4]]
