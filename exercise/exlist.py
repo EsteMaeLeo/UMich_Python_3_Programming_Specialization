@@ -226,8 +226,9 @@ newList = [element[i] for element in nested for i in range(len(element))]
 print(newList)
 
 #Implement a function that takes a list of numbers and returns a new list with only the numbers that are greater than the average of the list (use list comprehension + sum/len).
-def list_average(list):
-    averageList = [avg for number in list avg = avg + number ]
+def list_average(list): 
+    #averageList = [  for number in list ]
+    averageList = sum(number for number in list) / len(list)
     return averageList
 
 average_list =list_average(newList)
