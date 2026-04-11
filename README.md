@@ -18,3 +18,5 @@
 ##### option for efficiency reasons.
 ##### with open(fname, 'r') as fileref:
 #####  for lin in fileref:
+
+### new_list = [new_item for item in list if condition]
