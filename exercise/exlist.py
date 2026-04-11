@@ -228,7 +228,8 @@ print(newList)
 #Implement a function that takes a list of numbers and returns a new list with only the numbers that are greater than the average of the list (use list comprehension + sum/len).
 def list_average(list): 
     #averageList = [  for number in list ]
-    averageList = sum(number for number in list) / len(list)
+    averageNumber = sum(number for number in list) / len(list)
+    averageList = [number for number in list if number > averageNumber]
     return averageList
 
 average_list =list_average(newList)
