@@ -226,13 +226,28 @@ newList = [element[i] for element in nested for i in range(len(element))]
 print(newList)
 
 #Implement a function that takes a list of numbers and returns a new list with only the numbers that are greater than the average of the list (use list comprehension + sum/len).
-def list_average(list): 
+def list_average(numbers): 
     #averageList = [  for number in list ]
-    averageNumber = sum(number for number in list) / len(list)
-    averageList = [number for number in list if number > averageNumber]
+    if not numbers:
+        return []
+    averageNumber = sum(numbers) / len(numbers)
+    averageList = [number for number in numbers if number > averageNumber]
     return averageList
 
 average_list =list_average(newList)
 print(average_list)
 
 #Create a queue using deque and simulate a simple print queue: add 5 jobs, then process (remove) them one by one.
+print_queue = deque()
+print(print_queue)
+print_queue.append("document.pdf")
+print_queue.append("cv.pdf")
+print_queue.append("tesis.pdf")
+print_queue.append("recipe.docx")
+print_queue.append("photo.jpg")
+print("Jobs in queue ", list(print_queue))
+
+while print_queue:
+    current = print_queue.popleft()
+    print(f"Printing: {current}")
+    
