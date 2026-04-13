@@ -38,5 +38,5 @@ string_line= "HelloMyNameIsChancleta"
 
 new_string = [i for i in string_line]
 print(new_string)
-new_string = "".join([ i if i.islower() else " " + i for i in string_line])
+new_string = "".join([ i if i.islower() else " " + i.lower() if i in ["N", "I"] else " " + i for i in string_line])[1:] #remove the first empty space at beggining also remove N to n and I  to i
 print(new_string)
