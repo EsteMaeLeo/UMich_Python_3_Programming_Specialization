@@ -40,3 +40,20 @@ new_string = [i for i in string_line]
 print(new_string)
 new_string = "".join([ i if i.islower() else " " + i.lower() if i in ["N", "I"] else " " + i for i in string_line])[1:] #remove the first empty space at beggining also remove N to n and I  to i
 print(new_string)
+
+# Create a list of 10 tuples containing movies and years
+movies_list = [
+    ("The Shawshank Redemption", 1994),
+    ("The Godfather", 1972),
+    ("The Dark Knight", 2008),
+    ("Pulp Fiction", 1994),
+    ("Schindler's List", 1993),
+    ("The Lord of the Rings: The Return of the King", 2003),
+    ("Fight Club", 1999),
+    ("Forrest Gump", 1994),
+    ("Inception", 2010),
+    ("The Matrix", 1999)
+]
+
+pre2k = [title for (title, year) in movies_list if year < 2000]
+print(pre2k)
