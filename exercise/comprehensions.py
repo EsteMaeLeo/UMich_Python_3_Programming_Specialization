@@ -57,3 +57,30 @@ movies_list = [
 
 pre2k = [title for (title, year) in movies_list if year < 2000]
 print(pre2k)
+
+a = [1, 3, 5, 7]
+b = [2, 4, 6, 8]
+cartesian_product = [(a1, b1) for a1 in a for b1 in b ]
+print(cartesian_product)
+
+options = ["any", "albany", "apple", "world", "hello", ""]
+
+valid_strings = [
+    string
+    for string in options
+    if len(string) >= 2
+    if string[0] == "a"
+    if string[-1] == "y"
+]
+print(valid_strings)
+
+valid_strings = []
+for string in options:
+    if len(string) <= 1:
+        continue
+    if string[0] != "a":
+        continue
+    if string[-1] != "y":
+        continue
+    valid_strings.append(string)
+print(valid_strings)
